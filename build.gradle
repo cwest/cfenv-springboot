@@ -26,6 +26,8 @@ targetCompatibility = 1.8
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
+    compile("redis.clients:jedis:2.1.0")
+    compile("org.springframework.data:spring-data-redis:1.6.1.RELEASE")
     testCompile("junit:junit")
 }
 
