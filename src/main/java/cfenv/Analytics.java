@@ -2,7 +2,9 @@ package cfenv;
 
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.support.atomic.RedisAtomicLong;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Analytics {
 	private final StringRedisTemplate template;
 
