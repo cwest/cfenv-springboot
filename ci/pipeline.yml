@@ -12,4 +12,4 @@ jobs:
   - get: cfenv-springboot
     trigger: true
   - task: build
-    file: ci/tasks/build.yml
+    file: cfenv-springboot/ci/tasks/build.yml

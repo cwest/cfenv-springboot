@@ -6,5 +6,9 @@ image_resource:
     repository: java
     tag: "8"
 run:
-  path: gradle
-  args: ["build"]
+  path: sh
+  args:
+  - -exc
+  - |
+    sudo apt-get install gradle
+    cd cfenv-springboot && gradle build
