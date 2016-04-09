@@ -5,7 +5,8 @@ image_resource:
   source:
     repository: java
     tag: "8"
-inputs: cfenv-springboot
+inputs:
+- cfenv-springboot
 run:
   path: sh
   args:
