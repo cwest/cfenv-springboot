@@ -1,0 +1,15 @@
+---
+resources:
+- name: cfenv-springboot
+  type: git
+  source:
+    uri: https://github.com/cwest/cfenv-springboot
+    branch: add-concourse
+
+jobs:
+- name: make-jar-not-war
+  plan:
+  - get: cfenv-springboot
+    trigger: true
+  - task: build
+    file: ci/tasks/build.yml
