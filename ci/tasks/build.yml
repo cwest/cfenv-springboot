@@ -14,4 +14,4 @@ run:
   - |
     curl -L -o gradle.zip "https://services.gradle.org/distributions/gradle-2.12-bin.zip"
     unzip gradle.zip
-    cd cfenv-springboot && ../gradle-2.12/bin/gradle build
+    cd cfenv-springboot && ../gradle-2.12/bin/gradle --console plain
