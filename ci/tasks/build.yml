@@ -7,6 +7,8 @@ image_resource:
     tag: "8"
 inputs:
 - name: cfenv-springboot
+outputs:
+- name: jar
 run:
   path: sh
   args:
@@ -15,3 +17,5 @@ run:
     curl -L -o gradle.zip "https://services.gradle.org/distributions/gradle-2.12-bin.zip"
     unzip gradle.zip
     cd cfenv-springboot && ../gradle-2.12/bin/gradle build -Pversion=$(git describe --always) --console plain
+    cp cfenv-springboot/build/libs/cfenv-springboot-$(git describe --always).jar jar/cfenv-springboot.jar
+

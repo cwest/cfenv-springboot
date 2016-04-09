@@ -13,3 +13,6 @@ jobs:
     trigger: true
   - task: gradle
     file: cfenv-springboot/ci/tasks/build.yml
+  - put: built-project
+    params:
+      file: built-project/cfenv-springboot.jar
