@@ -11,5 +11,5 @@ jobs:
   plan:
   - get: cfenv-springboot
     trigger: true
-  - task: build
+  - task: gradle build
     file: cfenv-springboot/ci/tasks/build.yml
