@@ -1,4 +1,4 @@
 ---
 applications:
-- name: cfenv-springboot
+- name: cwest-cfenv-springboot
   path: build/libs/gs-rest-service-0.1.0.jar

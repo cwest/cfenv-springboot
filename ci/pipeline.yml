@@ -5,6 +5,14 @@ resources:
   source:
     uri: https://github.com/cwest/cfenv-springboot
     branch: add-concourse
+- name: pws
+  type: cf
+  source:
+    api: http://api.run.pivotal.io
+    username: {{pws-username}}
+    password: {{pws-password}}
+    organization: {{pws-organization}}
+    space: {{pws-space}}
 
 jobs:
 - name: make-jar-not-war
@@ -13,3 +21,8 @@ jobs:
     trigger: true
   - task: gradle
     file: cfenv-springboot/ci/tasks/build.yml
+  - put: pws
+    params:
+      path: jar/cfenv-springboot.jar
+      current_app_name: cwest-cfenv-springboot
+      manifest: cfenv-springboot/manifest.yml
