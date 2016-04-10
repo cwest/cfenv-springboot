@@ -17,5 +17,5 @@ run:
     curl -L -o gradle.zip "https://services.gradle.org/distributions/gradle-2.12-bin.zip"
     unzip gradle.zip
     cd cfenv-springboot && ../gradle-2.12/bin/gradle build -Pversion=$(git describe --always) --console plain
-    cp build/libs/cfenv-springboot-$(git describe --always).jar jar/cfenv-springboot.jar
+    cp build/libs/cfenv-springboot-$(git describe --always).jar ../jar/cfenv-springboot.jar
 
